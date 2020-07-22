@@ -20,8 +20,12 @@ print(splits[:10])
 print(args.fold_A)
 
 for sp in splits:
-    img_fold_A = os.path.join(args.fold_A, sp)
-    img_fold_B = os.path.join(args.fold_B, sp)
+    ##img_fold_A = os.path.join(args.fold_A, sp)
+    ##img_fold_B = os.path.join(args.fold_B, sp)
+    
+    img_fold_A = args.fold_A
+    img_fold_B = args.fold_B
+    
     img_list = os.listdir(img_fold_A)
     if args.use_AB:
         img_list = [img_path for img_path in img_list if '_A.' in img_path]
